@@ -23,9 +23,11 @@
         var playerScore = 0
         do {
             let computer = Math.floor(Math.random() * 3 + 1)
+            //Computer will generate a random number i.e 1 1,2 or 3. Based on the number 1=snake, 2=water and 3=gun is assigned to computer
 
             let player = prompt("Select 1 for Snake || 2 for Water || 3 for Gun")
-            player = Number.parseInt(player)
+            // player will select anyone of these choices 
+            player = Number.parseInt(player) // convert typeof string to number
 
             if (computer === player) {
                 alert("draw!!")
