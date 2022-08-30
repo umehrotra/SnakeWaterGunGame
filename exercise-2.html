@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 2</title>
+</head>
+
+<body>
+    <h1>Snake, water and gun game</h1>
+    <script>
+        // Q - Create Snake, Water & Gun game in JavaScript.
+        // The game should ask you to enter S, W or G. The computer should be able to randomly generate S, W or G and declare win or loss using alert
+        // Use alert, prompt and confirm whereever required!
+
+        // 1 - snake 2-water 3- gun
+
+        alert("lets play Snake Water Gun game")
+
+        var computerScore = 0
+        var playerScore = 0
+        do {
+            let computer = Math.floor(Math.random() * 3 + 1)
+
+            let player = prompt("Select 1 for Snake || 2 for Water || 3 for Gun")
+            player = Number.parseInt(player)
+
+            if (computer === player) {
+                alert("draw!!")
+            } else if (computer === 1 && player === 2) {
+                alert("computer win!!")
+                computerScore++
+                alert("Computer score = " + computerScore)
+            }
+            else if (computer === 1 && player === 3) {
+                alert("Player win!!")
+                playerScore++
+                alert("Player score = " + playerScore)
+            }
+            else if (computer === 2 && player === 1) {
+                alert("Player win!!")
+                playerScore++
+                alert("Player score = " + playerScore)
+            }
+            else if (computer === 2 && player === 3) {
+                alert("computer win!!")
+                computerScore++
+                alert ( "Computer score = " + computerScore)
+            }
+            else if (computer === 3 && player === 1) {
+                alert("computer win!!")
+                computerScore++
+                alert("Computer score = " +ccomputerScore)
+            }
+            else if (computer === 3 && player === 2) {
+                alert("Player win!!")
+                playerScore++
+                alert("Player score = " + playerScore)
+            }
+        } while (
+            confirm("Do you want to play again")
+            )
+            console.log("Computer score = " + computerScore)
+            console.log("Player score = " + playerScore)
+    </script>
+</body>
+
+</html>
